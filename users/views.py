@@ -22,7 +22,6 @@ def index(request):
 class SignIn(View):
     def get(self, request):
         if request.user.is_authenticated:
-            print("Authenticated")
             return redirect('boards')
         else:
             return render(request, 'auth.html')
